@@ -1,16 +1,22 @@
 
+
 <head>
     <meta charset="utf-8">
     <title>Fresh Tomatoes!</title>
+    <link href="https://fonts.googleapis.com/css?family=Ranga&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap 3 -->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <style type="text/css" media="screen">
         body {
-            padding-top: 80px;
+            font-family: 'Ranga', cursive;
+            color:##FEFF0;
+        }
+        h2{
+            font-family: 'Roboto';
+            font-size: 10sp;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -23,14 +29,17 @@
             right: -12px;
             z-index: 9001;
         }
+
         #trailer-video {
             width: 100%;
             height: 100%;
         }
+
         .movie-tile {
             margin-bottom: 20px;
             padding-top: 20px;
         }
+
         .movie-tile:hover {
             background-color: #EEE;
             cursor: pointer;
@@ -39,6 +48,7 @@
             padding-bottom: 56.25%;
             position: relative;
         }
+
         .scale-media iframe {
             border: none;
             height: 100%;
@@ -48,7 +58,9 @@
             top: 0;
             background-color: white;
         }
+
     </style>
+
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
         $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
@@ -56,6 +68,7 @@
             // reliable way to ensure the video stops playing in IE
             $("#trailer-video-container").empty();
         });
+
         // Start playing the video whenever the trailer modal is opened
         $(document).on('click', '.movie-tile', function (event) {
             var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
@@ -67,19 +80,30 @@
               'frameborder': 0
             }));
         });
+
         // Animate in the movies when the page loads
+
         $(document).ready(function () {
           $('.movie-tile').hide().first().show("fast", function showNext() {
             $(this).next("div").show("fast", showNext);
           });
+
         });
+
     </script>
+
 </head>
 
+
+
 <!DOCTYPE html>
+
 <html lang="en">
+
   <body>
+
     <!-- Trailer Video Modal -->
+
     <div class="modal" id="trailer">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -91,34 +115,38 @@
         </div>
       </div>
     </div>
-    
-    <!-- Main Page Content -->
-    <div class="container">
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="wmiIUN-7qhE" data-toggle="modal" data-target="#trailer">
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Toy_Story.jpg/220px-Toy_Story.jpg" width="220" height="342">
-    <h2>Toy Story</h2>
+
+
+
+<!-- Main Page Content -->
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Ms. Jimenez's Favorite Movie Page</a>
+</nav>
 </div>
+    <div class="card-deck">
+      
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="wmiIUN-7qhE" data-toggle="modal" data-target="#trailer">
+    <img class="card mx-auto" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Toy_Story.jpg/220px-Toy_Story.jpg" width="220" height="342">
+    <h1>Toy Story</h1>
+    <h2>A story of a boy</h2>
+</div>
+
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="XCwy6lW5Ixc" data-toggle="modal" data-target="#trailer">
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/11/School_of_Rock_Poster.jpg/220px-School_of_Rock_Poster.jpg" width="220" height="342">
-    <h2>School of Rock</h2>
+    <img class="card mx-auto" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/11/School_of_Rock_Poster.jpg/220px-School_of_Rock_Poster.jpg" width="220" height="342">
+    <h1>School of Rock</h1>
+    <h2>Using rock music to learn</h2>
 </div>
 
+
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="mfmrPu43DF8" data-toggle="modal" data-target="#trailer">
-    <img src="https://upload.wikimedia.org/wikipedia/en/4/42/HungerGamesPoster.jpg" width="220" height="342">
-    <h2>Hunger Games</h2>
+    <img class="card mx-auto" src="https://upload.wikimedia.org/wikipedia/en/4/42/HungerGamesPoster.jpg" width="220" height="342">
+    <h1>Hunger Games</h1>
+    <h2>A really real reality show</h2>
 </div>
 
     </div>
   </body>
 </html>
+
